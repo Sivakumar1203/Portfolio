@@ -1,0 +1,201 @@
+/* ==========================================================================
+   RESPONSIVE LAYOUT & MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-badge-status {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .hero-card-frame {
+    max-width: 360px;
+  }
+
+  .metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .focus-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .creative-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 68px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--bg-glass-strong);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 18px;
+    border-bottom: 1px solid var(--border-subtle);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-normal);
+  }
+
+  .nav-links.mobile-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .btn-nav-desktop {
+    display: none;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 20px);
+  }
+
+  .card-float-top {
+    right: -10px;
+    top: 10px;
+  }
+
+  .card-float-bottom {
+    left: -10px;
+    bottom: 10px;
+  }
+
+  .metrics-strip {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achieve-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-container::before {
+    left: 15px;
+  }
+
+  .timeline-dot {
+    left: 4px;
+  }
+
+  .timeline-item {
+    padding-left: 42px;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .about-intro-box {
+    padding: 24px;
+  }
+
+  .future-hero-statement {
+    padding: 24px 20px;
+  }
+
+  .creative-banner {
+    padding: 28px 20px;
+  }
+
+  .contact-info-card, .contact-form-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2.1rem;
+  }
+
+  .hero-headline {
+    font-size: 1.25rem;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-img-wrap {
+    height: 360px;
+  }
+
+  .hero-floating-card {
+    display: none;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .copy-btn {
+    align-self: flex-end;
+  }
+}
